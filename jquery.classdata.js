@@ -1,12 +1,17 @@
 /**
- * jQuery ClassData Plugin - Enable reading and writing of data stored via the classNames of an/a set of element(s)
+ * jQuery ClassData Plugin - Enable reading and writing data stored via the classNames of an/a set of element(s)
  *
  * @author	Bram Van Damme (aka Bramus!) - http://www.bram.us/
- * @version	1.0
+ * @version	1.01
  *
  * @license	BSD License - http://creativecommons.org/licenses/BSD/
  *
  * @note	This is the jQuery blend of the PrototypeJS ClassData Extension by Jurriaan Persyn (http://www.jurriaanpersyn.com)
+ *
+ * v 1.01	- 2010.11.06 	Made toReturn a local variable (instead of a global one)
+ *							Removed trailing newline
+ *							Pushed this thing onto GitHub
+ * v 1.0 	- 2009.02.09 	Initial Release
  */
 
 // closure
@@ -33,7 +38,7 @@
 			{
 				
 				// define toReturn;
-				toReturn = Array(this.length);
+				var toReturn = Array(this.length);
 
 				// rework key
 				key = key + glue;
